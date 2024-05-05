@@ -1,0 +1,330 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1f1f1f; /* Dark background */
+  color: #fff; /* White text */
+  position: fixed;
+  border-right: 2px solid #333; 
+}
+/* Style for the home link */
+.home-link {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+body {
+  background-color: rgb(1, 1, 1); 
+}
+.profile {
+  padding: 20px;
+  text-align: center;
+}
+/* Top Navigation Bar Header Text Styles */
+.top-nav-bar h1 {
+  color:white; /* Red text for the header */
+  text-align: center; /* Center the text */
+  width: 100%; /* Full width to allow centering */
+  position: absolute; /* Positioning relative to the top-nav-bar */
+  top: 0; /* Align to the top of the navigation bar */
+  left: 0; /* Align to the left of the navigation bar */
+  margin-top: 10px; /* Adjust the space from the top */
+  font-size: 30px; /* Adjust the font size as needed */
+  z-index: -1; /* Place the text behind the logo */
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  margin-bottom: 20px;
+}
+
+.nav {
+  list-style-type: none;
+  padding-left: 0; /* Remove default padding */
+}
+
+.nav-item {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.nav-button, .nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff; /* White text */
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.5s; /* Slower transition for hover effect */
+}
+
+.nav-button:hover, .nav a:hover {
+  background-color: black; /* Darker background on hover */
+}
+
+.sub-nav {
+  display: none;
+  position: static;
+  width: 100%;
+}
+
+.nav-item:hover .sub-nav {
+  display: block;
+}
+
+.sub-nav a:before {
+  content: attr(data-icon);
+  margin-right: 10px;
+}
+
+.account-actions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Main content styles */
+#main-content {
+  margin-left: 250px; /* Space for the sidebar */
+  padding-top: 60px; /* Space for the top navigation bar */
+}
+
+/* Top Navigation Bar styles */
+.top-nav-bar {
+  background-color: #333; /* Dark background for the navigation bar */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 250px; /* Align with the main content */
+  z-index: 1000; /* Ensure the navigation bar is above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.chatbot-logo {
+  height: 50px; /* Adjust the size as needed */
+  margin-left: 10px; /* Add spacing between logo and text */
+}
+
+.nav-text {
+  font-weight: bold;
+  margin-right: 10px; /* Add spacing between logo and text */
+}
+
+
+/* Top Navigation Bar Styles */
+.top-nav-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 250px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dashboard Card Styles */
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 80px; /* Adjust based on the height of your top navigation bar */
+}
+
+.dashboard-card img {
+  width: 100%;
+  height: 80%;
+  height: auto;
+  background-color: black;
+}
+
+.dashboard-card h3 {
+  margin: 0;
+  padding: 12px;
+  color: white;
+  background-color: #2a2a2a;
+}
+
+/* Section Header Styles */
+.section-header {
+width: calc(100% - 250px); /* Adjust width to account for sidebar */
+margin-left: 250px; /* Align with the main content */
+padding: 20px; /* Add some padding */
+background-color: #333; /* Match the top navigation bar color */
+color: #fff; /* Text color */
+text-align: left; /* Align the text to the left */
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Optional: add shadow for depth */
+}
+
+.section-header h2 {
+margin: 0; /* Remove default margin */
+padding-bottom: 10px; /* Add some space below the heading */
+}
+
+
+/* Main Content Styles */
+#main-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f1f1f; /* Dark background for the main content */
+}
+
+/* Dashboard Card Styles */
+.dashboard-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #060606; /* Slightly lighter dark background for cards */
+}
+
+/* ... rest of your CSS ... */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-card {
+      width: 100%;
+  }
+}
+
+/* Main Content Styles */
+#main-content {
+padding: 20px;
+background-color: #1f1f1f; /* Dark background for the main content */
+}
+
+/* Existing Dashboard Sections Styles */
+.dashboard-sections {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 80px; /* Adjust based on the height of your top navigation bar */
+}
+
+/* New Additional Sections Styles */
+.additional-sections {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 20px;
+margin-top: 20px; /* Space between dashboard cards and new sections */
+
+}
+
+/* Financial Statistics and Recent Activities Styles */
+.financial-statistics, .recent-activities {
+width: calc(50% - 10px); /* Adjust width for two columns, subtracting gap */
+margin-bottom: 20px; /* Space between rows */
+}
+
+/* Last Transactions Styles */
+.last-transactions {
+width: 100%;
+margin-bottom: 20px; /* Space between rows */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.financial-statistics, .recent-activities, .last-transactions {
+    width: 100%;
+}
+}
+
+/* Special Features Section Styles */
+.special-features-section {
+  width: 100%;
+  padding: 20px;
+  background-color: #1f1f1f; /* Dark background for the section */
+  text-align: center;
+}
+
+.special-features-section h2 {
+  color: #fff; /* White text */
+  margin-bottom: 20px;
+}
+.special-features-section {
+  text-align: center; /* Centers the header text */
+}
+
+.special-features-section h2 {
+  margin-bottom: 2rem; /* Adds space below the header */
+}
+
+.features-list {
+  display: flex;
+  justify-content: center; /* Centers the features horizontally */
+  flex-wrap: wrap; /* Allows features to wrap onto the next line */
+  gap: 5rem; /* Adds space between the features */
+}
+
+.feature {
+  position: relative;
+  width: 150px; /* Adjust sisze as needed */
+  margin: 0; /* Resets any default margin */
+}
+
+.feature-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional: rounded corners for images */
+}
+
+.feature-heading {
+  color: #fff; /* White text */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 5px;
+  margin-top: -5px; /* Align with the bottom of the image */
+  text-align: center; /* Centers the heading text */
+}
+
+.feature-desc {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #fff; /* White text */
+  text-align: center;
+  border-radius: 0 0 5px 5px; /* Match the image border-radius */
+}
+
+.feature:hover .feature-desc {
+  display: block;
+}

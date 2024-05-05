@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webpage Layout</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+  .image-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .image-side img {
+    max-width: 60%;
+    max-height: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .button-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.button-side h1,
+.button-side h2
+.button-side h3 {
+  text-align:left ;
+}
+
+.button-side h1{
+  font-size: 50px;
+}
+
+.button-side hr {
+  width: 80%;
+  margin: 8px 0;
+  border: none;
+  height: 1px;
+  background-color: #3D3D3D;
+}
+
+.button-side button {
+  width: 200px; /* Adjust the width as needed */
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  background-color: #3D3D3D;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block; /* Display buttons side by side */
+}
+
+.button-side button:hover {
+  background-color: #5f625f;
+}
+
+  header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    width: 100%; /* Set header width to 100% */
+    position: fixed; /* Fixed position to keep it at the top */
+    z-index: 1000; /* Ensure header is above other elements */
+    top: 0; /* Position at the top */
+  }
+  .logo {
+    font-size: 24px; /* Larger font size for the logo */
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 50px; /* Add margin to the right of the navigation */
+    padding: 0;
+  }
+  nav ul li {
+    margin-right: 20px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .cta-button {
+    background-color:black;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 80px;
+  }
+  .cta-button:hover {
+    background-color: rgb(34, 34, 34);
+  }
+
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">CASH iQ</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Community</a></li>
+      </ul>
+    </nav>
+    <button class="cta-button" onclick="startQuiz()">Start Quiz</button>
+</header>
+<div class="grid-container">
+  <div class="button-side">
+    <!-- Your existing content -->
+    <h3>Find out your Financial Literacy Level</h3>
+    <hr>
+    <h1><b>Unveil your <br>Financial<br>personality</b></h1>
+    <hr>
+    <h2>Learn more about your money mindeset</h2>
+    <hr>
+    <button id="registerBtn" title="Begin with our interactive quiz now">Right Now</button>
+    <button id="loginBtn">Explore Insights</button>
+  </div>
+  <div class="image-side">
+    <!-- Your image -->
+    <img src="before_profile_pic.jpeg" alt="Login Image">
+  </div>
+</div>
+
+<script>
+  function startQuiz() {
+  // Add your JavaScript code to start the quiz
+  console.log('Quiz started');
+  }
+  // JavaScript code for button interactions
+  document.getElementById('registerBtn').addEventListener('click', function() {
+    console.log('Register button clicked');
+  });
+  document.getElementById('loginBtn').addEventListener('click', function() {
+  window.location.href = 'ProfileSetup.html'; // This will redirect to the ProfileSetup.html page
+});
+</script>
+</body>
+</html>

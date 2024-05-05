@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fraud Detector</title>
+    <link rel="stylesheet" href="fraud.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2 text-align="top">Fraud Detector</h2>
+    <form id="fraud-form" enctype="multipart/form-data">
+        <input type="file" id="file-input" accept=".pdf,.doc,.docx" required>
+        <input type="submit" value="Check for Fraud">
+    </form>
+    <div class="container">
+        <h4>AI-powered Financial Translator:  This feature tackles complex financial jargon. Users can upload financial documents (loan agreements, investment reports) and receive plain-language explanations of key terms and conditions.
+        </h4>
+        <p>Financial advisor fraud detection involves monitoring and analyzing financial advisors' activities to identify any unethical or illegal behavior. Here are some actions a financial advisor fraud detection system can perform:
+
+            Monitoring Transactions - Analyzing financial transactions to detect unusual or suspicious activities, such as excessive trading, unauthorized transactions, or large withdrawals.
+            Identifying Conflicts of Interest - Detecting potential conflicts of interest, such as financial advisors recommending investments that benefit them more than their clients.
+            Verifying Credentials - Checking financial advisors' credentials, licenses, and registrations to ensure they are authorized to provide financial advice.
+            Auditing Financial Records - Reviewing financial records and statements to ensure accuracy and compliance with regulations.
+            Analyzing Client Complaints - Examining client complaints and feedback to identify patterns of misconduct or dissatisfaction.</p></div>
+    <div class="result"></div>
+    <script>
+        document.getElementById('fraud-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const file = document.getElementById('file-input').files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            const response = await fetch('/api/fraud-detection', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            document.querySelector('.result').innerHTML = `<p>Result: ${result.fraud ? 'Fraud detected' : 'No fraud detected'}</p>`;
+        });
+    </script>
+</body>
+</html>

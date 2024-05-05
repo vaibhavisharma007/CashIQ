@@ -1,0 +1,304 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px;
+    background-color: #1f1f1f; /* Darker shade for sidebar */
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+    transition: width 0.5s;
+  }
+  
+  .profile {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-name {
+    color: #a5a5a5; /* Light grey text */
+  }
+  
+  .nav {
+    list-style-type: none;
+  }
+  
+  .nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #a5a5a5; /* Light grey text */
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .nav a:hover {
+    background-color: #333333; /* Slightly lighter shade for hover */
+    color: #ffffff;
+  }
+  
+  /* Main content styles */
+  #main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+    padding-top: 20px;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+  
+  .nav a[href="#learning-path"] {
+    background-color: red; /* Red background for the Learning Path */
+    border-radius: 10px; /* Curved corners */
+    color: #ffffff; /* White text for better contrast */
+  }
+
+  
+  /* Section styles */
+  section {
+    margin-bottom: 20px;
+  }
+  
+  /* Add any additional styles you need here */
+  
+  /* Responsive design */
+  @media screen and (max-width: 600px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    .sidebar a:not(:first-child) {display: none;}
+    .sidebar a.icon {
+      float: right;
+      display: block;
+    }
+  
+    #main-content {
+      margin-left: 0;
+    }
+  }
+  
+  /* Collapsed sidebar styles */
+  .active {
+    width: 80px; /* Adjust width for collapsed state */
+  }
+  
+  /* Include any additional responsive or specific styles as needed */
+  .course-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .course-list li {
+    background-color: #333; /* Dark grey background for list items */
+    color: #fff; /* White text color */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .course-list li:hover {
+    background-color: #444; /* Slightly lighter grey on hover */
+  }
+
+  .account-actions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .nav .icon {
+    margin-right: 10px;
+  }
+  
+  /* Style adjustments for the bottom navigation */
+  .account-actions .nav {
+    padding: 10px 0;
+  }
+  
+  .account-actions .nav a {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .account-actions .nav a:hover {
+    background-color: #444; /* Slightly lighter grey on hover */
+  }
+  
+  .top-nav {
+    background-color: #1f1f1f; /* Dark background for the header */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-nav ul li {
+    margin-right: 20px;
+  }
+  
+  .top-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .top-nav ul li a:hover {
+    color: #e74c3c; /* Red accent color */
+  }
+  
+  .search-container {
+    display: flex;
+  }
+  
+  .search-container input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search-container button {
+    padding: 5px 10px;
+    background-color: #e74c3c; /* Red accent color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  
+  .dashboard-header h1 {
+    margin-top: 20px; /* Adds space above the h1 element */
+    text-align: center; /* Centers the text */
+    color: #fff; 
+  }
+  
+  .courses-section h2 {
+    margin-bottom: 30px; /* Adjust the value as needed */
+  }
+  
+  .courses-container {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 30px; /* This adds space above the course cards */
+  }
+  
+
+  .course-card {
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+    width: 200px; /* Width of each course card */
+    margin-right: 15px;
+    background-color: #333; /* Card background color */
+    color: #fff; /* Text color */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure that content does not spill outside the card */
+    position: relative; /* Position relative to allow absolute positioning inside */
+  }
+  
+
+  .course-card img {
+    width: 100%;
+    height: 150px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio and crop if needed */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .course-info h3 {
+    margin-bottom: 10px; /* Space between title and description */
+  }
+
+
+  .course-info {
+    padding: 10px;
+  }
+
+  .course-description {
+    position: absolute; /* Position the description absolutely within the card */
+    bottom: 0; /* Align to the bottom of the card */
+    left: 0; /* Align to the left of the card */
+    width: 100%; /* Full width of the card */
+    background-color:  #333; /* Semi-transparent background */
+    color: #fff; /* Text color */
+    transform: translateY(100%); /* Initially hidden below the card */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+    padding: 10px; /* Padding for the text */
+    opacity: 0; /* Make the description fully transparent */
+  }
+  
+  .course-card:hover .course-description {
+    transform: translateY(0); /* Slide up to reveal on hover */
+    opacity: 1; /* Make the description fully opaque */
+  }
+  /* Add additional styling as needed */
+
+
+/* Deep Dive Section Styling */
+.deep-dive-section {
+  background-color: #1f1f1f; /* Dark background for the section */
+  color: #ffffff; /* Light text for content */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.deep-dive-section h2 {
+  margin-bottom: 20px;
+  color: #ffffff; /* Light text for heading */
+}
+
+.resources-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.resource-item {
+  width: 180px; /* Fixed width for each item */
+  margin: 10px;
+  text-align: center;
+}
+
+.resource-item img {
+  width: 100%;
+  height: 120px; /* Fixed height for images */
+  object-fit: cover;
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+.resource-item h3 {
+  margin-top: 10px;
+  color: #ffffff; /* Light text for titles */
+}

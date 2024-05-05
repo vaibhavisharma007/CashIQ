@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Insights</title>
+    <style>
+       /* Profilesetup.css */
+
+/* Additional CSS styles specific to this page */
+/* Feel free to adjust as needed */
+
+html, body {
+    height: 100%;
+} 
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 2px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:black; 
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.step {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #6c6e8bbb; /* Slightly transparent dark gray */
+    color: #0e0c0c;
+    font-weight: bolder;
+}
+
+.step.active {
+    background-color: #6c6e8bbb; /* Deep blue for active step */
+    color: #f0e6e6; /* Light gray text color */
+    font-weight: bolder;
+    align-items: center;
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    width: 30%;
+    font-weight: bold;
+}
+
+.form-section input,
+.form-section select {
+    width: 65%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0a0505;
+    border-radius: 3px;
+}
+
+select {
+    width: calc(65% - 2px); /* Adjusted width to match other input fields */
+    padding: 0; /* Removed padding */
+    border: 1px solid #ccc; /* Matched border style of other input fields */
+    border-radius: 5px;
+}
+
+
+button {
+    background-color: #080e5c; /* Dark red button */
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+  <div class="header">
+      <h1>Financial Insights</h1>
+      <p>Your path to financial success</p>
+  </div>
+  <div class="container">
+    <div class="progress-bar">
+        <span class="step active">1. Personal Info</span><hr>
+        <span class="step">2. Select Preferences</span><hr>
+        <span class="step">3. Set Financial Goals</span><hr>
+    </div>
+    <form id="financial-form" action="ProfileSetup2.html">
+        <div class="form-section">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-section">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-section">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+        </div>
+        <div class="form-section">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender" required>
+        </div>
+        <div class="form-section">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        <div class="form-section">
+            <label for="profession">Profession</label>
+            <input type="text" id="profession" name="profession" required>
+        </div>
+        <div class="form-section">
+            <label for="financialKnowledge">Financial Knowledge</label>
+            <select name="financialKnowledge" id="financialKnowledge">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <button type="submit">Proceed</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+</html>

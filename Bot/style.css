@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Poppins:wght@200;300&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    background: rgb(0, 0, 0);
+  }
+
+.h1 {
+    background-color: #111; /* Darker gray background for content */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+h2 {
+  font-size: 5em;
+  margin-bottom: 15px;
+  color: #3399ff;
+}
+p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.button {
+    background-color: #3399ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #2eafff;
+}
+  .container {
+    --light-color: #fff;
+    height: 420px;
+    width: 350px;
+    background: var(--light-color);
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    box-shadow: 0px 0px 15px 0px black;
+  }
+  .chat-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: #0652c0;
+    color: var(--light-color);
+    font-size: 1.5rem;
+  }
+  
+  .chat-header .logo {
+    height: 35px;
+    width: 35px;
+    box-shadow: 0px 0px 10px 0px black;
+  }
+  .chat-header img {
+    height: 100%;
+    width: 100%;
+  }
+  .chat-header .title {
+    padding-left: 10px;
+  }
+  .chat-body {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    align-items: flex-end;
+    overflow-y: auto;
+  }
+  .chat-input {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+  }
+  .input-sec {
+    flex: 9;
+  }
+  .send {
+    flex: 1;
+    padding-right: 4px;
+  }
+  #txtInput {
+    line-height: 30px;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    caret-color: black;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .chatbot-message,
+  .user-message {
+    padding: 8px;
+    background: #ccc;
+    margin: 5px;
+    width: max-content;
+    border-radius: 10px 3px 10px 10px;
+  }
+  .chatbot-message {
+    background: #0652c0;
+    color: var(--light-color);
+    align-self: flex-start;
+    border-radius: 10px 10px 3px 10px;
+  }         

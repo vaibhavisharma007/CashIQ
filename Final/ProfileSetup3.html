@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Insights</title>
+    <style>
+        /* Profilesetup.css */
+html, body {
+    height: 100%;
+} 
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 2px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:black; 
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.step {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #6c6e8bbb; /* Slightly transparent dark gray */
+    color: #0e0c0c;
+    font-weight: bolder;
+}
+
+.step.active {
+    background-color: #6c6e8bbb; /* Deep blue for active step */
+    color: #f0e6e6; /* Light gray text color */
+    font-weight: bolder;
+    align-items: center;
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    width: 30%;
+    font-weight: bold;
+}
+
+.form-section input,
+.form-section select {
+    width: 65%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0a0505;
+    border-radius: 3px;
+}
+
+select {
+    width: calc(65% - 2px); /* Adjusted width to match other input fields */
+    padding: 0; /* Removed padding */
+    border: 1px solid #ccc; /* Matched border style of other input fields */
+    border-radius: 5px;
+}
+
+
+button {
+    background-color: #080e5c; /* Dark red button */
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Style adjustments for input and select elements */
+.form-section input,
+.form-section select {
+    width: calc(65% - 10px); /* Adjust width to account for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:white;
+    color: rgb(10, 10, 10);
+}
+
+/* Style adjustments for textarea to match other input fields */
+.form-section textarea {
+    width: calc(65% - 10px); /* Adjust width to account for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(14, 13, 13);
+    height: auto; /* Remove fixed height to allow 'rows' attribute to determine height */
+}
+
+
+    </style>
+</head>
+<body>
+  <div class="header">
+      <h1>Financial Insights</h1>
+      <p>Your path to financial success</p>
+  </div>
+  <div class="container">
+    <div class="progress-bar">
+        <span class="step">1. Personal Info</span><hr>
+        <span class="step">2. Select Preferences</span><hr>
+        <span class="step active">3. Set Financial Goals</span><hr>
+    </div>
+    <form id="financial-form"  action="home.html">
+        <!-- ... existing form sections for personal info and preferences ... -->
+        <div class="form-section">
+            <label for="savingsGoal">Savings Goal</label>
+            <input type="number" id="savingsGoal" name="savingsGoal" placeholder="Enter your target savings amount" required>
+        </div>
+        <div class="form-section">
+            <label for="retirementAge">Desired Retirement Age</label>
+            <input type="number" id="retirementAge" name="retirementAge" placeholder="Enter your desired retirement age" required>
+        </div>
+        <div class="form-section">
+            <label for="investmentReturnExpectation">Expected Return on Investments</label>
+            <input type="text" id="investmentReturnExpectation" name="investmentReturnExpectation" placeholder="e.g., 5% annually" required>
+        </div>
+        <div class="form-section">
+            <label for="majorExpenses">Upcoming Major Expenses</label>
+            <textarea id="majorExpenses" name="majorExpenses" rows="3" placeholder="Describe any major expenses you anticipate in the next 5 years"></textarea>
+        </div>
+        <div class="form-section">
+            <label for="financialSecurityImportance">Importance of Financial Security</label>
+            <select name="financialSecurityImportance" id="financialSecurityImportance">
+                <option value="veryImportant">Very Important</option>
+                <option value="somewhatImportant">Somewhat Important</option>
+                <option value="neutral">Neutral</option>
+                <option value="notVeryImportant">Not Very Important</option>
+                <option value="notAtAllImportant">Not at All Important</option>
+            </select>
+        </div>
+  <div class="button-container">
+            <button type="submit">Proceed</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+   

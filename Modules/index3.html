@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<!-- Add links to any additional libraries or frameworks you might be using -->
+</head>
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <!-- User Profile -->
+  <div class="profile">
+    <img src="cat.png" alt="User Profile" class="profile-img">
+    <h2 class="profile-name">Hi John</h2>
+  </div>
+  <!-- Navigation -->
+  <ul class="nav">
+    <li><a href="#dashboard">Dashboard</a></li>
+    <li><a href="#financial-insights">Financial Insights</a></li>
+    <li><a href="#financial-goals">Financial Goals</a></li>
+    <li><a href="#financial-reports">Financial Reports</a></li><br>
+    <li><a href="#learning-path">Learning Path</a></li>
+    <ul class="course-list">
+        <li>Investing for Growth: Strategies to Build Wealth</li>
+        <li>Debt-Free Living: Techniques to Eliminate Debt</li>
+        <li>The Gig Economy: Creating Multiple Income Streams</li>
+      </ul>
+    </section>
+   </ul>
+   <!-- Account Settings and Sign Out -->
+    <div class="account-actions">
+        <ul class="nav">
+        <li>
+            <a href="#account-settings">
+            <span class="icon">⚙</span> Account Settings
+            </a>
+        </li>
+        <li>
+            <a href="#sign-out">
+            <span class="icon">❮</span> Sign Out
+            </a>
+        </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div id="main-content">
+  <!-- Dashboard Header -->
+  <header class="dashboard-header">
+    <nav class="top-nav">
+        <ul>
+          <li><a href="../Final/home.html">Home</a></li>
+          <li><a href="#my-learning-paths">My Learning Paths</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#discussion_forum">Discussion Forum</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" placeholder="Search..." name="search">
+          <button type="submit">&#128269;</button>
+        </div>
+      </nav>
+      <h1>Welcome to Your Dashboard</h1>
+    </header>  
+    <section class="courses-section">
+        <h2>Courses Recommended for You</h2>
+
+        
+        <div class="courses-container">
+          <!-- Individual Course Card -->
+          <!-- Individual Course Card -->
+          <div class="course-card">
+            <img src="Retirement3.png" alt="Course 1">
+            <div class="course-info">
+              <h3>Retirement Planning: Securing Your Future</h3>
+              <p class="course-description">Plan for a comfortable retirement by understanding retirement accounts, pension plans, and the power of compound interest.</p>
+            </div>
+          </div>
+          <!-- Repeat for other course cards -->
+          <div class="course-card">
+            <img src="tax.jpg" alt="Course 1">
+            <div class="course-info">
+              <h3>Tax Efficiency for Savvy Investors</h3>
+              <p class="course-description">Learn how to optimize your investments for tax efficiency and understand the implications of different investment vehicles.</p>
+            </div>
+          </div>
+          <!-- Repeat for other course cards -->
+          <div class="course-card">
+            <img src="Sustainable.png" alt="Course 1">
+            <div class="course-info">
+              <h3>Green Finance and Investment</h3>
+              <p class="course-description">Explore the growing field of green finance, focusing on investments that support environmental sustainability.</p>
+            </div>
+          </div>
+          <!-- Repeat for other course cards -->
+          <div class="course-card">
+            <img src="Blockchain.jpg" alt="Course 1">
+            <div class="course-info">
+              <h3>Cryptocurrency and Blockchain: An Introduction</h3>
+              <p class="course-description">Get to grips with the basics of cryptocurrencies and blockchain technology, and their potential impact on the future of finance.</p>
+            </div>
+          </div>
+          <!-- Repeat for other course cards -->
+          <div class="course-card">
+            <img src="travel.jpg" alt="Course 1">
+            <div class="course-info">
+              <h3>Strategic Financial Management for Tourism and Travel</h3>
+              <p class="course-description">Explore topics such as budgeting for travel businesses, investment strategies in the tourism sector, and financial analysis for travel agencies.
+              </p>
+            </div>
+          </div>
+          <!-- Repeat for other course cards -->
+        </div>
+      </section>  
+      <!-- Deep Dive Section -->
+<section class="deep-dive-section">
+  <h2>Ready to dive deep?<br><br> Discover what we have for you!</h2>
+  <div class="resources-container">
+    <!-- Resource Item -->
+    <div class="resource-item">
+      <img src="blog.jpg" alt="Blog">
+      <h3>Blogs</h3>
+    </div>
+    <!-- Repeat for other resources -->
+    <div class="resource-item">
+      <img src="podcasts.webp" alt="Podcast">
+      <h3>Podcasts</h3>
+    </div>
+    <div class="resource-item">
+      <img src="case_study.png" alt="Case Study">
+      <h3>Case Studies</h3>
+    </div>
+    <div class="resource-item">
+      <img src="article.avif" alt="Article">
+      <h3>Articles</h3>
+    </div>
+    <div class="resource-item">
+      <img src="comic.avif" alt="Comic Book Series">
+      <h3>Comic Book Series</h3>
+    </div>
+    <!-- Add more resource items as needed -->
+  </div>
+</section>
+
+  
+</div>
+
+<script>
+// JavaScript to handle sidebar toggle
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

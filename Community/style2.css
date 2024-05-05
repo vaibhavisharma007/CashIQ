@@ -1,0 +1,90 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black; /* Ensures the background is black */
+  min-height: 100vh; /* Ensures the body stretches to at least the full height of the viewport */
+  color: #e0e0e0; /* Ensures text is visible on the black background */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+#nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+.cta-buttons {
+  margin-top: 1rem;
+}
+
+.cta-buttons button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.feature {
+  background-color: #2b2b2b; /* Adjusted to a darker shade for better contrast */
+  padding: 1rem;
+  text-align: center;
+}
+
+.feature h2 {
+  margin-bottom: 1rem;
+}
+
+.feature ul {
+  list-style-type: none;
+}
+
+.feature li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}

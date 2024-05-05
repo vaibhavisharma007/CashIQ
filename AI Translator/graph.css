@@ -1,0 +1,32 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.graphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.graph-container {
+    width: 45%;
+    margin-bottom: 2rem;
+}
+
+.graph-container img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.graph-container p {
+    color: #e0e0e0;
+    margin-top: 0;
+}
